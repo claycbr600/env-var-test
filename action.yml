@@ -9,4 +9,6 @@ runs:
   using: "composite"
   steps:
     - shell: bash
+      env:
+        who: ${{ inputs.who }}
       run: docker run --rm busybox env
